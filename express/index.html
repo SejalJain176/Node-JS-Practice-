@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym</title>
+    <style>
+        body {
+            margin: 8px;
+            padding: 12px;
+            background: url('adult-g50edcafa4_1920.jpg');
+            background-position: 0px -342px
+                /* display: inline-block; */
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            width: 60px;
+            height: 47px;
+            display: inline-block;
+            padding: 1px 39px;
+            margin: 1px 16px;
+        }
+
+        .right {
+            /* border: 2px solid rgb(3, 70, 17); */
+            width: 60px;
+            height: 47px;
+            display: inline-block;
+            padding: 35px 39px;
+            position: absolute;
+            right: 47px;
+            margin: 2px 1px;
+            top: 19px;
+        }
+
+        .mid {
+            /* border: 2px solid yellow; */
+            width: 403px;
+            height: 47px;
+            display: inline-block;
+            padding: 1px 39px;
+            margin: 1px 375px;
+
+        }
+
+        .left img {
+            width: 75px;
+            height: 44px;
+            width: 75px;
+            filter: invert(100%);
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            margin: 0px 18px;
+            color: mediumaquamarine;
+        }
+        .navbar li a:hover{
+        color: aliceblue;
+        text-decoration: underline;
+        }
+        .navbar li  a.active{
+        color: aliceblue;
+        text-decoration: underline;
+        }
+
+        .btn {
+            color:red;
+            /* background: border-box; */
+            width: max-content;
+
+        }
+
+        .btn:hover{
+            color:#11cb2e;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="adult-g50edcafa4_1920.jpg" alt=""> -->
+    <div class="container">
+        <div class="left">
+            <img src="dumbbells-gbbcb728a7_1280.png" alt="logo">
+        </div>
+
+        <div class="mid">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Programs</a></li>
+                    <li><a href="/contact">Contact</a></li>
+
+                 </ul>
+            </nav>
+        </div>
+        <div class="right">
+            <button class="btn" onclick="window.location.href = 'joiningform.html';">Join Now</button>
+        </div>
+    </div>
+</body>
+
+</html>

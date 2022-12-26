@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Form</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        .container {
+            background-color: grey;
+            margin: auto;
+            padding: 96px 253px;
+        }
+
+        .container form {
+            margin: 1px 1px;
+            padding: 1px 1px;
+        }
+
+        input {
+            margin: 22px 87px;
+            padding: 5px 223px;
+        }
+
+        .inputfield {
+            margin: 1px 1px;
+            padding: 1px 1px;
+        }
+
+        button {
+            width: 268px;
+            margin: 54px 215px;
+        }
+        button:hover{
+            color: black;
+        }
+        h1{
+            text-align: center;
+        }
+        /* select{
+           
+       } */
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1> Welcome to Fitness Freak</h1>
+        <form action="noaction.php">
+            <div class="inputfield">
+                <input type="text" placeholder="Enter your Name">
+            </div>
+            <div class="inputfield">
+                <input type="number" placeholder=" Enter your Age"   min="0" >
+            </div>
+
+            <div class="inputfield">
+                <select>
+                <option>Female</option>
+                <option>Male</option>
+                </select>
+
+            </div>
+            <div class="inputfield">
+                <input type="number" placeholder="Enter your Weight" min="0">
+            </div>
+            <div class="inputfield">
+                <button >Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
