@@ -13,7 +13,7 @@
         }
 
         .container {
-            background-color: grey;
+            background-color: bisque;
             margin: auto;
             padding: 96px 253px;
         }
@@ -43,36 +43,46 @@
         h1{
             text-align: center;
         }
-        /* select{
-           
-       } */
+        select{
+            margin: 22px 87px !important;
+            padding: 7px 272px !important;
+       }
+       .submitstyle{
+        color: chocolate;
+    background: navy;
+    width: 20%;
+    padding: 11px;
+    /* margin: 72px; */
+    position: relative;
+    left: 108px;
+       }
         
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1> Welcome to Fitness Freak</h1>
-        <form action="noaction.php">
+        <h1 style="color: saddlebrown;"> Welcome to Fitness Freak</h1>
+        <form action="./submit" method="post">
             <div class="inputfield">
                 <input type="text" placeholder="Enter your Name">
             </div>
             <div class="inputfield">
-                <input type="number" placeholder=" Enter your Age"   min="0" >
+                <input type="text" placeholder=" Enter your Age"   min="0" >
             </div>
 
-            <div class="inputfield">
-                <select>
+            <div class="inputfield" >
+                <select placeholder="Gender">
                 <option>Female</option>
                 <option>Male</option>
                 </select>
 
             </div>
             <div class="inputfield">
-                <input type="number" placeholder="Enter your Weight" min="0">
+                <input type="text" placeholder="Enter your Weight" min="0">
             </div>
             <div class="inputfield">
-                <button >Submit</button>
+                <button class="submitstyle" type="submit" >Submit</button>
             </div>
         </form>
     </div>
