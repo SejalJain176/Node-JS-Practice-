@@ -37,55 +37,78 @@
             width: 268px;
             margin: 54px 215px;
         }
-        button:hover{
+
+        button:hover {
             color: black;
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
-        select{
+
+        select {
             margin: 22px 87px !important;
             padding: 7px 272px !important;
-       }
-       .submitstyle{
-        color: chocolate;
-    background: navy;
-    width: 20%;
-    padding: 11px;
-    /* margin: 72px; */
-    position: relative;
-    left: 108px;
-       }
-        
+        }
+
+        .submitstyle {
+            color: chocolate;
+            background: navy;
+            width: 20%;
+            padding: 11px;
+            /* margin: 72px; */
+            position: relative;
+            left: 108px;
+        }
     </style>
 </head>
 
 <body>
+   
     <div class="container">
         <h1 style="color: saddlebrown;"> Welcome to Fitness Freak</h1>
-        <form action="./submit" method="post">
-            <div class="inputfield">
+        <form id="form">
+            <div id="name" class="inputfield">
                 <input type="text" placeholder="Enter your Name">
             </div>
-            <div class="inputfield">
-                <input type="text" placeholder=" Enter your Age"   min="0" >
+            <div id="age" class="inputfield">
+                <input type="text" placeholder=" Enter your Age" min="0">
             </div>
 
-            <div class="inputfield" >
+            <div id="gender" class="inputfield">
                 <select placeholder="Gender">
-                <option>Female</option>
-                <option>Male</option>
+                    <option>Female</option>
+                    <option>Male</option>
                 </select>
 
             </div>
-            <div class="inputfield">
+            <div id="weight" class="inputfield">
                 <input type="text" placeholder="Enter your Weight" min="0">
             </div>
             <div class="inputfield">
-                <button class="submitstyle" type="submit" >Submit</button>
+                <button class="submitstyle" type="submit" value="submit">Submit</button>
             </div>
         </form>
     </div>
+<script>
+    debugger
+    const loginFormDOM = document.querySelector('.form');
+        const user = { name, age, gender, weight };
+        loginFormDOM.addEventListener('submit', async (e) => {
+           
+            debugger
+            const response = await fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(user),
+            });
+        })
+
+</script>
+    
+
 </body>
 
 </html>

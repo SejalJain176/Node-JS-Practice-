@@ -11,14 +11,14 @@ const about = fs.readFileSync('./express/about.html')
 const services = fs.readFileSync('./express/services.html')
 const contact = fs.readFileSync('./express/contact.html')
 const joinform = fs.readFileSync('./express/joiningform.html')
-//const submitform = fs.readFileSync('./express/submit.js')
+const submitform = fs.readFileSync('./express/submit.html')
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
     url = req.url;
 
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/html');
+    //res.setHeader('Content-Type', 'text/html');
     if (url == '/') {
         res.end(home);
     }
@@ -33,10 +33,12 @@ const server = http.createServer((req, res) => {
     }
 
     else if (url == '/joiningform.html') {
+
         res.end(joinform);
     }
     else if (url == '/submit') {
-       console.log(req.body)
+        res.statusCode=200;
+        res.end("<h1>Submitted Successfully!</h1>")
     }
     else {
         res.statusCode = 404;
